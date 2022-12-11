@@ -4,7 +4,7 @@ COPY --chmod=755 <<EOF /app/run.sh
 #!/bin/sh
 while true; do
   echo -ne "The time is now $(date +%T)\\r"
-  sleep 1
+  sleep 2
 done
 EOF
 
