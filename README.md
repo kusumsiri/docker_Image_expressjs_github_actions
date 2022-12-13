@@ -1,3 +1,5 @@
 # testRepo
-Readme file for testRepo\n
-This repo for testing CI/CD
+Readme file for  ExpressJS_CICD
+
+This repo for testing CI/CD with  ExpressJS
+
