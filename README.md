@@ -1,4 +1,3 @@
 # testRepo
 Readme file for testRepo\n
-Edited on VS Code
-Editing to fire jenkins
+This repo for testing CI/CD
