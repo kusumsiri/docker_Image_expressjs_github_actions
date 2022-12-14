@@ -1,0 +1,32 @@
+{
+  "name": "expressjs_cicd",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "An ExpressJS & CI/CD test project",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --experimental-json-modules --exec babel-node app.js",
+    "debug" : "--experimental-json-modules --exec babel-node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kusumsiri/ExpressJS_CICD.git"
+  },
+  "author": "Kusumsiri",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kusumsiri/ExpressJS_CICD/issues"
+  },
+  "homepage": "https://github.com/kusumsiri/ExpressJS_CICD#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^2.0.20"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.19.3",
+    "@babel/core": "^7.20.5",
+    "@babel/node": "^7.20.5",
+    "@babel/preset-env": "^7.20.2"
+  }
+}

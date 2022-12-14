@@ -1,11 +1,20 @@
 # syntax=docker/dockerfile:1
-FROM busybox:latest
-COPY --chmod=755 <<EOF /app/run.sh
-#!/bin/sh
-while true; do
-  echo -ne "The time is now $(date +%T)\\r"
-  sleep 3
-done
-EOF
+FROM node:alpine3.16
 
-ENTRYPOINT /app/run.sh
+# app directory
+WORKDIR /app
+
+# Install app dependencies
+COPY package*.json ./
+
+RUN npm install -g nodemon
+
+RUN npm install
+# RUN npm install --only=production #If you are building your code for production
+
+# Bundle app source
+COPY app /app
+
+EXPOSE 3000
+CMD [ "nodemon", "app.js" ]
+#CMD ["npm","start"]
