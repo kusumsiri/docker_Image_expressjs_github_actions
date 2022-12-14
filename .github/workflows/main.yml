@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    runs-on: node:alpine
+    runs-on: node:18-alpine
     steps:
       -
         name: Checkout
@@ -28,4 +28,4 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/expressjs:node-alpine
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/expressjs:node:18-alpine
