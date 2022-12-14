@@ -6,7 +6,7 @@ const app = express();
 const PORT = 3000;
 
 app.get('/', (req, res)=>{
-  res.send('Welcome. You are in the root of ExpressJS server.<br/>Use http://localhost:3000/list/ to list some mock data');
+  res.send('Welcome. You are in the root of ExpressJS server.<br/>Use http://localhost:3000/list/ to list some mock data.');
   //console.log(req);
 })
 
