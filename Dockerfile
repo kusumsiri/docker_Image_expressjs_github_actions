@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:1
-FROM node:current-alpine
+FROM node:alpine3.16
 
 # app directory
 WORKDIR /app
