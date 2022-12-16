@@ -1,4 +1,4 @@
-name: ci
+name: CI/CD pipeline to build the image
 
 on:
   push:
@@ -28,4 +28,4 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/clockbox:latest
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/expressjs:latest
