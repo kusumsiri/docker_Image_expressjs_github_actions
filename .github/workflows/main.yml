@@ -28,4 +28,4 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/expressjs:alpine3.16
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/expressjs:node:alpine3.16
