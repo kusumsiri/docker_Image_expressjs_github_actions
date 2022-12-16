@@ -6,8 +6,7 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon --experimental-json-modules --exec babel-node app.js",
-    "debug" : "--experimental-json-modules --exec babel-node app.js"
+    "start": "nodemon app/app.js"
   },
   "repository": {
     "type": "git",
