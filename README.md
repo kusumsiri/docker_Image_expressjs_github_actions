@@ -1,4 +1,4 @@
-# CI/CD Pipeline with NodeJS Express application
+# CI/CD Pipeline with NodeJS Express application on Docker
 An application that demonstrates how to use a CI/CD pipeline to automate the Docker image build process.
 
 ### Introduction
