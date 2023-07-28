@@ -1,10 +1,10 @@
-# CI/CD Pipeline with NodeJS Express application on Docker
-An application that demonstrates how to use a CI/CD pipeline to automate the Docker image build process.
+# Build Docker Images with Github Actions
+## Introduction
+An application that demonstrates how to use a CI/CD pipeline to automate the Docker image build process. This creates an Express.js application image on Docker hub after committing the code to the repository.
 
-### Introduction
-A [CI/CD pipeline](https://www.redhat.com/en/topics/devops/what-cicd-pipeline) is a series of steps that must be taken to deliver a new version of software. In this demonstration, a very simple NodeJS Express file is used as the software source.
+In this demonstration, a very simple Express.js file is used as the software source.
 
-### Install
+## Install
 If you intend to run the source code before building the docker image, the following commands can be used.
 > Note: This requires your computer to have a [Git client](https://git-scm.com/downloads/guis) and [NodeJS](https://nodejs.org/en/) installed.
 ```
@@ -15,7 +15,7 @@ npm start
 ```
 Then visit http://localhost:3000 to test it.
 
-### Building the Docker image
+## Building the Docker image
 This [Dockerfile](./Dockerfile) contains instructions for build the image. It uses the node:current-alpine image as the base. After that it will copy *.json files, install the packages, copy the source code, set the port and finally copy the run command.
 If you intend to build the docker image locally, the following commands can be used.
 > Note: This requires your computer to have [Docker](https://www.docker.com/) installed.
@@ -34,7 +34,7 @@ Then visit http://localhost:3000 to test it.
 
 > Note: All these steps must be performed manually when the Docker container needs to be created. But we can automate the process by using a CI/CD pipeline.
 
-### CI/CD Pipeline
+## CI/CD Pipeline
 The [main.yml](/.github/workflows/main.yml) file that handles the CI/CD process. It `checkout` the source code from GitHub repository, `builds` the image according to the Dockerfile and finally `push` the image to [docker hub](https://hub.docker.com/repository/docker/kusumsiri/expressjs)
 
 Now anyone can go to [Docker Hub](https://hub.docker.com/repository/docker/kusumsiri/expressjs) and `pull` the image and `run` it easily.
